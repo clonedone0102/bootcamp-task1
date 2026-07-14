@@ -3,206 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Hadar</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: #333;
-        }
-
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #00f2fe;
-        }
-
-        /* CONTAINER */
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* HERO */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .hero img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #4facfe;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        /* BIODATA */
-        .biodata {
-            margin-top: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .biodata h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .bio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .box {
-            background: #f1f1f1;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        /* PORTFOLIO */
-        .portfolio {
-            margin-top: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .portfolio h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .port-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #fafafa;
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .bio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .port-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>HADAR.exe | Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#biodata">Biodata</a>
-        <a href="#portfolio">Portfolio</a>
-    </nav>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#home" class="logo mono">&gt;_ HADAR.exe</a>
+            <nav class="d-none d-md-flex">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-
-        <!-- HERO -->
-        <section class="hero" id="home">
-            <div>
-                <h2>Selamat Datang di Website Saya</h2>
-                <p>Ini adalah website modern menggunakan HTML & CSS Grid.</p>
-                <a href="#" class="btn">Pelajari Lebih Lanjut</a>
+    <div class="container main-container">
+        
+        <section id="home" class="row align-items-center min-vh-100 py-5">
+            <div class="col-lg-7 hero-info order-2 order-lg-1 mt-5 mt-lg-0">
+                <h3 class="mono">&gt; Hello, I'm</h3>
+                <h1 class="mono">HADAR<br>SAMUDERA<span>_</span></h1>
+                <div class="badge-custom">Cybersecurity Enthusiast</div>
+                <p class="hero-desc">
+                    Fresh graduate Teknik Komputer dengan fokus pada Cybersecurity, Web Security, dan Network Security. Selalu belajar, bereksperimen, dan membangun solusi keamanan digital.
+                </p>
+                <div class="btn-group-custom mono">
+                    <a href="#projects" class="btn-cyber btn-outline-blue">&gt;_ LIHAT PROJECT</a>
+                    <a href="https://drive.google.com/file/d/1Fvd5-y1sq1raFcIwrYFSslM-TeMG04Oq/view?usp=sharing" class="btn-cyber btn-outline-purple" id="btnDownloadCV" target="_blank" rel="noopener noreferrer">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3"/></svg> DOWNLOAD CV
+                    </a>
+                </div>
             </div>
-            <div>
-                <img src="image/WhatsApp Image 2026-04-30 at 11.13.32 (1).jpeg" alt="gambar">
+            
+            <div class="col-lg-5 d-flex justify-content-center order-1 order-lg-2 mt-5 mt-lg-0">
+                <div class="hero-image-container">
+                    <div class="cyber-frame">
+                        <img src="image/gambar 1.jpeg" alt="Hadar Samudera">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- BIODATA -->
-        <section class="biodata" id="biodata">
-            <h2>About Me</h2>
-            <div class="bio-grid">
-                <div class="box"><b>Nama</b><br>Hadar Samudera</div>
-                <div class="box"><b>Pendidikan</b><br>S1 Teknik Komputer</div>
-                <div class="box"><b>Pekerjaan</b><br>Cybersecurity Enthusiast</div>
-                <div class="box"><b>Email</b><br>hadarsamudera@gmail.com</div>
-                <div class="box"><b>Hobi</b><br>Cybersecurity</div>
-                <div class="box"><b>Alamat</b><br>Indonesia</div>
+        <section id="about" class="py-5">
+            <h3 class="section-title mono">&gt; ABOUT ME</h3>
+            <div class="cyber-box p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-3 d-flex justify-content-center mb-3 mb-md-0">
+                        <div class="about-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-9 text-start">
+                        <p class="about-text m-0">
+                            Saya adalah Cybersecurity Enthusiast yang memiliki minat besar di dunia keamanan siber, khususnya dalam Web Security, Penetration Testing, dan Linux System. Saya senang mempelajari hal baru, memecahkan masalah, dan membangun tools yang bermanfaat.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
-        <section class="portfolio" id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="port-grid">
-                <div class="card">
-                    <img src="https://via.placeholder.com/200">
-                    <h3>Project 1</h3>
-                    <p>Deskripsi project 1</p>
+        <section id="skills" class="py-5">
+            <h3 class="section-title mono">&gt; SKILLS</h3>
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <div class="cyber-box h-100 p-4">
+                        <div class="skill-bar-wrapper mb-4">
+                            <div class="skill-info d-flex justify-content-between mb-2"><span>HTML</span><span>90%</span></div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill blue-fill" data-percent="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper mb-4">
+                            <div class="skill-info d-flex justify-content-between mb-2"><span>CSS</span><span>85%</span></div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill purple-fill" data-percent="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper mb-4">
+                            <div class="skill-info d-flex justify-content-between mb-2"><span>Python</span><span>80%</span></div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill green-fill" data-percent="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-wrapper mb-2">
+                            <div class="skill-info d-flex justify-content-between mb-2"><span>PHP</span><span>70%</span></div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill orange-fill" data-percent="70%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/200">
-                    <h3>Project 2</h3>
-                    <p>Deskripsi project 2</p>
+
+                <div class="col-md-6">
+                    <div class="terminal-window h-100">
+                        <div class="terminal-header d-flex justify-content-end gap-2 p-2">
+                            <div class="dot dot-red"></div>
+                            <div class="dot dot-yellow"></div>
+                            <div class="dot dot-green"></div>
+                        </div>
+                        <div class="terminal-body p-4">
+                            <span class="t-user">user@hadar:</span><span class="t-command">~$ cat skills.txt</span>
+                            <span class="t-output">&gt; Web Development</span>
+                            <span class="t-output">&gt; Cybersecurity</span>
+                            <span class="t-output">&gt; Linux Administration</span>
+                            <span class="t-output">&gt; Network Security</span>
+                            <span class="t-output">&gt; Problem Solving</span>
+                            <span class="t-output">&gt; Penetration Testing</span>
+                            <span class="t-user">user@hadar:</span><span class="t-command">~$ <span class="blink-cursor">_</span></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/200">
-                    <h3>Project 3</h3>
-                    <p>Deskripsi project 3</p>
+
+            </div>
+        </section>
+
+        <section id="projects" class="py-5">
+            <h3 class="section-title mono">&gt; PROJECTS</h3>
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="cyber-box project-card h-100 p-4 d-flex flex-column align-items-center text-center justify-content-between">
+                        <div class="proj-icon mb-3" style="color: var(--neon-blue);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h4>Phishing Simulation Lab</h4>
+                        <p class="flex-grow-1">Simulasi serangan phishing menggunakan SEToolkit & Zphisher untuk edukasi kesadaran keamanan.</p>
+                        <button class="btn-cyber btn-outline-blue btn-sm mono open-proj" data-title="Phishing Simulation Lab" data-desc="Proyek ini dirancang di lingkungan lab terisolasi untuk mendemonstrasikan bagaimana taktik rekayasa sosial bekerja. Menggunakan kerangka kerja open-source untuk melatih staf IT mengenali serangan spear-phishing.">&gt;_ VIEW DETAIL</button>
+                    </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="cyber-box project-card h-100 p-4 d-flex flex-column align-items-center text-center justify-content-between">
+                        <div class="proj-icon mb-3" style="color: var(--neon-purple);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                        </div>
+                        <h4>Web Vulnerability Scanner</h4>
+                        <p class="flex-grow-1">Tools berbasis Python untuk scanning kerentanan pada website seperti SQL Injection, XSS, dll.</p>
+                        <button class="btn-cyber btn-outline-purple btn-sm mono open-proj" data-title="Web Vulnerability Scanner" data-desc="Pindai celah keamanan aplikasi web Anda secara otomatis. Skrip ini menganalisis parameter input terhadap celah injeksi umum dan menghasilkan laporan eksploitasi potensial secara real-time.">&gt;_ VIEW DETAIL</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="cyber-box project-card h-100 p-4 d-flex flex-column align-items-center text-center justify-content-between">
+                        <div class="proj-icon mb-3" style="color: var(--neon-green);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h4>IoT Smart System</h4>
+                        <p class="flex-grow-1">Proyek IoT Smart Garden & Smart Window meggunakan ESP32, sensor, dan integrasi web.</p>
+                        <button class="btn-cyber btn-outline-green btn-sm mono open-proj" data-title="IoT Smart System" data-desc="Integrasi perangkat keras pintar menggunakan mikrokontroler ESP32 yang mengirimkan metrik sensor ke dasbor web terenkripsi melalui protokol MQTT.">&gt;_ VIEW DETAIL</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <h3 class="section-title mono">&gt; CONTACT</h3>
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-lg-3 col-md-6">
+                    <a href="mailto:hadarsamudera02@gmail.com" class="contact-card-link text-decoration-none">
+                        <div class="cyber-box contact-card p-4 d-flex flex-column align-items-center text-center justify-content-center h-100">
+                            <div class="contact-icon text-blue mb-2">📧</div>
+                            <h5 class="text-white m-0">Email</h5>
+                            <p class="small text-muted m-0 mt-1">hadarsamudera02@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="https://github.com/clonedone0102" target="_blank" rel="noopener noreferrer" class="contact-card-link text-decoration-none">
+                        <div class="cyber-box contact-card p-4 d-flex flex-column align-items-center text-center justify-content-center h-100">
+                            <div class="contact-icon text-white mb-2">🐙</div>
+                            <h5 class="text-white m-0">GitHub</h5>
+                            <p class="small text-muted m-0 mt-1">clonedone0102</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <a href="https://linkedin.com/in/hadarsamudera" target="_blank" rel="noopener noreferrer" class="contact-card-link text-decoration-none">
+                        <div class="cyber-box contact-card p-4 d-flex flex-column align-items-center text-center justify-content-center h-100">
+                            <div class="contact-icon text-blue mb-2">🔗</div>
+                            <h5 class="text-white m-0">LinkedIn</h5>
+                            <p class="small text-muted m-0 mt-1">hadarsamudera</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="cyber-box p-4 d-flex flex-column align-items-center text-center justify-content-center h-100">
+                        <div class="contact-icon text-red mb-2">📍</div>
+                        <h5 class="text-white m-0">Location</h5>
+                        <p class="small text-muted m-0 mt-1">Yogyakarta, Indonesia</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
     </div>
 
+    <footer class="text-center py-4">
+        <span class="text-green">🔒</span> &copy; 2026 HADAR SAMUDERA | ALL RIGHTS RESERVED
+    </footer>
+
+    <div class="modal-custom d-flex justify-content-center align-items-center" id="projectModal">
+        <div class="modal-content-custom p-4">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle" class="mono text-blue mb-3">Project Title</h3>
+            <p id="modalDesc" class="text-muted small lh-lg">Detailed description goes here...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
