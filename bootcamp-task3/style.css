@@ -1,0 +1,26 @@
+/* BACKGROUND */
+body {
+    background: linear-gradient(135deg, #2b3cff, #6a11cb);
+    color: white;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* CARD HOVER EFFECT */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
